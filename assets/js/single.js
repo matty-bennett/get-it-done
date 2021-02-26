@@ -20,6 +20,8 @@ var getRepoName = () => {
 
 var getRepoIssues = (repo) => {
     var apiUrl = "https://api.github.com/repos/" + repo + "/issues?direction=asc";
+    
+    // make request to get url
     fetch(apiUrl).then(function(response) {
         //request was succesful
         if (response.ok) {
